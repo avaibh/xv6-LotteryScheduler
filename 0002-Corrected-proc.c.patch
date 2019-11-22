@@ -1,0 +1,24 @@
+From 093392f6759c669f96ace5d3da62b88d68d52bd7 Mon Sep 17 00:00:00 2001
+From: Vaibhav Agrawal <va1019@nyu.edu>
+Date: Thu, 21 Nov 2019 22:57:03 -0500
+Subject: [PATCH 2/2] Corrected proc.c
+
+---
+ proc.c | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/proc.c b/proc.c
+index b81d947..19044f8 100644
+--- a/proc.c
++++ b/proc.c
+@@ -317,7 +317,6 @@ scheduler(void)
+       // Process is done running for now.
+       // It should have changed its p->state before coming back.
+       proc = 0;
+-      break;
+     }
+     release(&ptable.lock);
+ 
+-- 
+1.9.1
+
